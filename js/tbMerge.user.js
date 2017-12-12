@@ -139,7 +139,6 @@
             }
         };
         tbMerge.init();
-        tbMerge.debug(true);
         tbMerge.fastReply();
     }
 })()
