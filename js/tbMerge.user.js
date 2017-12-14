@@ -7,8 +7,9 @@
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
 // @updateURL    https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js
+// @downloadURL    https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js
 // @supportURL	https://github.com/52fisher/tbMerge/issues
-// @grant       none
+// @grant       GM_addStyle
 // ==/UserScript==
 ;(function() {
     var tbMerge={
