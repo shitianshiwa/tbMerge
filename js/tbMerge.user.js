@@ -28,7 +28,7 @@
             var regexRule=/将(.*?)吧?合并[至到入][ ]*?(\S+?)[ ]*?吧/,
                 isAgreed = /是否已与各吧吧主协商达成一致意见[：:].{0,8}是/,
                 isMoved = /是否已经转移需要保留的内容[：:].{0,8}是/,
-                delBar = /(?:吧[、 ,，;])|[和及]/ug,
+                delBar = /吧[、 ,，;和及]/ug,
                 delSign = /["“”【】]+/g;
 
             // get content or title
