@@ -6,6 +6,7 @@
 // @description 仅适用于贴吧合并吧标准申请格式
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
+// @updateURL    https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js
 // @supportURL	https://github.com/52fisher/tbMerge/issues
 // @grant       none
 // ==/UserScript==
