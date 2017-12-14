@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.1
+// @version     2.2
 // @description 仅适用于贴吧合并吧标准申请格式
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
