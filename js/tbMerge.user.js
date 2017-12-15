@@ -3,7 +3,7 @@
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
 // @version     2.3
-// @description 仅适用于贴吧合并吧标准申请格式,兼容部分非标准型格式内容
+// @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
 // @updateURL    https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js
@@ -158,7 +158,6 @@
                 var e = '<textarea onmouseover="this.select()" style="outline:none;resize:none;width:100%;height:80px;border: none;">'+'标题：'+$("h3.core_title_txt").text()+'\n链接：'+location.href.split(/[#\?$]/)[0]+'</textarea>';
                 $.dialog.alert(e,{
                     width:300,
-                    background:"#F3F3F3",
                     padding:10,
                     title: "请按 CTRL+C 复制"
                 });
