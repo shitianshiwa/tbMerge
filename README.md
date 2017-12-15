@@ -9,7 +9,7 @@ a tool examine and verify tbMerge
 
 ## how to install ?
 TamperMonkey/GreaseMonky/ViolentMonkey
-[INSTALL URL]("https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js")
+[INSTALL](https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js)
 
 ## what does kind of browser require ?
 
