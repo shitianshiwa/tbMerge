@@ -162,8 +162,6 @@
                     title: "请按 CTRL+C 复制"
                 });
             });
-
-
         }
     };
     tbMerge.init();
