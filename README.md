@@ -31,7 +31,7 @@ FireFox / Chrome / Edge .etc
 - 使用 tbMerge.copy() 开启复制 标题和链接
 - tbMerge.copy() to copy title & url quickly.
 - 以上功能可单独设置开关，如果注释掉或者删除所在行或者留空，表示不开启功能
-- if blank , it do not work.
+- if blank , it will not work.
 - *注意：* 必须使用最基本的 tbMerge.init() 初始化本插件，否则没有任何作用
 - *Attention:*  tbMerge.init() is necessary.
 - 其他高级功能如UASwitch，anti-UEG,MarkPost,requestHistories请使用 **贴吧合并审核平台**
