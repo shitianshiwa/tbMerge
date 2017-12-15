@@ -1,30 +1,17 @@
 # tbMerge
 a tool examine and verify tbMerge 
 
-## Update V2.1
+
+## Update V2.3
 - bug fixed 
-- fastReply is controllable
-- debug is controllable
-- css update (https)
-- Manager or Assistant only
-- other
-## Update V2.0
-- V1.1 Alpha / V1.2 beta to V2.0
-- Code refactoring with object-method
-- add many closure functions
-- optimize some rules and mergence logic
-- add debug controller
-- Once again when timeOut (recursion)
-- IIFE make everything beautiful.
-- fastReply support(two ways).
-- userAgent switch to defend UEG
-- all verified lists when get into tbMerge backstage
-- Manager candidate support
+- copy title & url support
+
 
 ## how to install ?
-tamperMonkey/greaseMonky/violentMonkey
+TamperMonkey/GreaseMonky/ViolentMonkey
+[INSTALL URL]("https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js")
 
-## what kind of browser requires ?
+## what does kind of browser require ?
 
 FireFox / Chrome / Edge .etc
 
@@ -37,4 +24,4 @@ FireFox / Chrome / Edge .etc
 - 使用 tbMerge.init() 初始化 插件
 - 使用 tbMerge.fastReply() 开启快速回复功能
 - 使用 tbMerge.debug() 开启开发者模式(only console.log)
-- 其他高级功能如UASwitch，anti-UEG,MarkPost,requestHistories请使用 **贴吧合并平台**
+- 其他高级功能如UASwitch，anti-UEG,MarkPost,requestHistories请使用 **贴吧合并审核平台**
