@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.4.4
+// @version     2.4.1
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -32,7 +32,8 @@
             $("#doneTips").hide();
             $("#errTips").hide();
             $("#checkTips").show();
-
+            // remove tb_*
+            $("span[class^=tb]").remove();
             //rule of regex
             var regexRule=/将(.*?)吧?合并[至到入][ ]*?(\S+?)[ ]*?吧/,
                 isAgreed = /是否已与各吧吧主协商达成一致意见[：:].{0,8}是/,
@@ -43,7 +44,7 @@
             // get content or title
             try{
                 var contentText = $('.d_post_content:eq(0)').text().replace(delSign,''),
-                    contentHTML = $('.d_post_content:eq(0)').remove(".tb_agree").remove(".tb_move").html(),
+                    contentHTML = $('.d_post_content:eq(0)').html(),
                     titleText = $("h3.core_title_txt").text().replace(delSign,''),
                     strRegex = contentText.match(regexRule)||titleText.match(regexRule);
             }catch(e){
@@ -183,7 +184,6 @@
         }
     };
     tbMerge.init();
-    tbMerge.debug();
     tbMerge.fastReply();
     tbMerge.copy();
 })()
