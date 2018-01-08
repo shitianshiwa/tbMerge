@@ -2,9 +2,10 @@
 a tool examine and verify tbMerge 
 
 
-## Update V2.3
-- bug fixed 
-- copy title & url support
+## Update V2.5
+- Update logic
+- Update rules
+- BAR limits
 
 
 ## how to install ?
