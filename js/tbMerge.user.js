@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.5
+// @version     2.6
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -18,7 +18,7 @@
         init:function(){
             if(PageData.forum.forum_name !== '贴吧合并' || !PageData.is_thread_admin) return tbMerge.initOK=false;
             try{
-                GM_addStyle('@charset "utf-8";.green{color:#0c9}.tb_agree,.tb_move{font-size:16px}.tbyuhb td{border-left:1px solid #cad9ea;padding:10px 10px}.tbyuhb table tr td:nth-child(1){background:#444;color:#fff;border-top:#BEBFC3;text-align:center;width:10%}.tbyuhb table tr:nth-child(odd){background:#EAF4F6}.tbyuhb table tr:nth-child(even){background:#FFF}.tbyuhb .tab{margin:1em auto;table-layout:fixed;border:1px solid #cad9ea}.tbyuhb ._tip{color:#000;width:50%;margin-top:1em;margin-left:1em}.tbyuhb .cx_tip{color:#fff;padding:.5em;width:5em;font-size:1em;background:#2D2B2B;border:1px solid #B0A6A7;box-shadow:1px 1px 1px #A2A0A0;border-radius:.3em;text-align:center}.tbyuhb a{display:block;margin-left:5%;margin-right:5%}.tbyuhb .barname{display:inline-block;margin:0 4px}.tbyuhb .red{color:red}.tbyuhb img{display:block;width:60px;height:60px}.tbyuhb .keep_bz,.tbyuhb .merge_bz{margin:0 auto;text-align:center}.tbyuhb .member_wrap.clearfix{margin-top:1em}.tbyuhb .member{display:inline-block}.tbyuhb .user_name{color:#A652D9;font-size:.8em;text-decoration:none;border:1px solid rgba(0,0,0,.2);background:#fff;position:relative;bottom:22px;padding:2px 4px;text-align:center;width:52px}.tbyuhb .copy{left:190px;background:#5cb85c none repeat scroll 0 0;color:#fff;padding:2px 8px;border-radius:5px;box-shadow:2px 2px 4px rgba(0,0,0,.2);margin-top:-10px;margin-bottom:10px;position:relative}.good,.tbyuhb .num{text-align:left;margin-left:25%}.tbyuhb .info{color:#55A2CE;float:left;padding-top:.5em;padding-left:8%;text-align:left}.tbyuhb .count{font-size:.8em;color:#000!important}@media screen and (min-width:960px) and (max-width:1199px){.tbyuhb .user_name{font-size:.8em}}@media screen and (min-width:768px) and (max-width:959px){.tbyuhb img{padding-left:1em}.tbyuhb .user_name{font-size:.8em}.tbyuhb .cx_tip{width:5em;font-size:.8em}}@media only screen and (min-width:480px) and (max-width:767px){.tbyuhb .user_name{font-size:.8em}.tbyuhb .cx_tip{width:5em;font-size:.8em}}@media only screen and (max-width:479px){.tbyuhb .user_name{font-size:.7em}.tbyuhb .info{font-size:.7em}.num,.tbyuhb .good{font-size:.7em}.advice,.tbyuhb .dir{font-size:.9em}.tbyuhb .count{font-size:.7em}.tbyuhb .cx_tip{margin-top:1em;width:5em;font-size:.8em}}');
+                GM_addStyle('.tbyuhb .alert,.tbyuhb .attention{max-width:800px;margin:0 auto;color:#31708f;background:#d9edf7;border-color:#bce8f1;max-height:100px}.tbyuhb .alert::-webkit-scrollbar{display:none}.tbyuhb .attention{width:100%;text-align:left;padding:10px;overflow-y:scroll}.tbyuhb .alert{width:60%;overflow:hidden}.tbyuhb .attention:before{content:"注意";font-weight:600;color:#D9534F}.tbyuhb .close-tip{float:right;display:inline;margin-top:-14px;border:1px solid #09C;border-radius:18px;font-size:15px;margin-right:-14px;color:#fff;width:20px;background:#09C;cursor:default;text-indent:0;text-align:center}.green{color:#0c9}.tb_agree,.tb_move{font-size:16px}.left{text-align:left!important}.tbyuhb table{margin:1em auto;table-layout:fixed;border:1px solid #cad9ea;border-spacing:0}.tbyuhb td{border-left:1px solid #cad9ea;padding:10px;text-align:center}.tbyuhb table tr{border-top:1px solid #cad9ea}.tbyuhb table tr th{background:#444;color:#fff;text-align:center;font-weight:400;width:10%}.tbyuhb table tr:nth-child(odd){background:#EAF4F6}.tbyuhb table tr:nth-child(even){background:#FFF}.tbyuhb ._tip{color:#000;width:50%;margin-top:1em;margin-left:1em}.tbyuhb .cx_tip{color:#fff;padding:.5em;width:5em;font-size:1em;background:#2D2B2B;border:1px solid #B0A6A7;box-shadow:1px 1px 1px #A2A0A0;border-radius:.3em;text-align:center}.tbyuhb .manager a{display:block}.tbyuhb .barname{display:inline-block;margin:0 4px}.tbyuhb .red{color:red}.tbyuhb img{width:60px;height:60px}.tbyuhb .manager{display:inline-block;height:60px;overflow:hidden;margin:5px}.tbyuhb .user_name{color:#A652D9;font-size:.8em;text-decoration:none;border:1px solid rgba(0,0,0,.2);background:#fff;position:relative;bottom:22px;padding:2px 4px;text-align:center;width:52px;height:16px}.tbyuhb .sign_info{color:#55A2CE;float:left;padding-top:.5em;padding-left:8%;text-align:left}.tbyuhb .count{font-size:.8em;color:#000!important}@media screen and (min-width:960px) and (max-width:1199px){.tbyuhb td,.tbyuhb th{font-size:1em}}@media screen and (min-width:768px) and (max-width:959px){.tbyuhb td,.tbyuhb th{font-size:.8em}.tbyuhb .cx_tip{width:5em;font-size:.8em}}@media only screen and (min-width:480px) and (max-width:767px){.tbyuhb .cx_tip{width:5em;font-size:.8em}}@media only screen and (max-width:479px){.tbyuhb td,.tbyuhb th{font-size:12px!important}.tbyuhb .cx_tip{margin-top:1em;width:5em;font-size:.8em}}');
             }catch(e){
                 console.log("GM_addStyle未生效："+e.message+"加载B方案");
                 $("head").append('<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/52fisher/tbMerge/master/css/tbMerge.css" />');
@@ -38,7 +38,7 @@
             $("span[class^=tb]").remove();
             //rule of regex
             var regexRule=/将(.*?)吧?合并[至到入][ ]*?(\S+?)[ ]*?吧/,
-                isAgreed = /是否已与各吧吧主协商达成一致意见[：:].{0,8}是/,
+                isAgreed = /是否已与各吧吧主协商达成一致意见[：:].{0,8}是[^否]/,
                 isMoved = /是否已经转移需要保留的内容[：:].{0,8}是/,
                 delBar = /吧[、 ,，;和及]/ug,
                 delSign = /["“” 【】]+/g;
@@ -186,7 +186,5 @@
             tbMerge.isDebug?console.log("copy start"):null;
         }
     };
-    tbMerge.init();
-    tbMerge.fastReply();
-    tbMerge.copy();
+    tbMerge.init()
 })()
