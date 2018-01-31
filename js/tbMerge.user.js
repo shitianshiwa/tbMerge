@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.6
+// @version     2.6.2
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -50,7 +50,11 @@
                     titleText = $("h3.core_title_txt").text().replace(delSign,''),
                     strRegex = contentText.match(regexRule)||titleText.match(regexRule);
             }catch(e){
-                console.log("合并规则产生错误:\n"+e.message+"\n");
+                var strRegex ='';
+                console.log("合并规则产生名单错误:\n"+e.message+"\n");
+                $.dialog.assert("合并规则产生名单错误:\n"+e.message+"\n",{
+                    title:"警告"
+                });
             }
             //format check
             if(tbMerge.isEmpty(strRegex)){
@@ -186,5 +190,6 @@
             tbMerge.isDebug?console.log("copy start"):null;
         }
     };
-    tbMerge.init()
+    tbMerge.init();
+
 })()
