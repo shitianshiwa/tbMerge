@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.6.5
+// @version     2.6.7
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -41,7 +41,7 @@
                 isAgreed = /是否.*?达成一致意见[：:].{0,8}是[^否]/,
                 isMoved = /是否.*?转移需要保留的内容[：:].{0,8}是/,
                 delBar = /吧[、 ,，;和及]/ug,
-                delSign = /["“”　 【】]+/g;
+                delSign = /["“”　 【】「」]+/g;
 
             // get content or title
             try{
