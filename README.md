@@ -2,14 +2,9 @@
 a tool examine and verify tbMerge 
 
 
-## Update V2.5
-- Update logic
-- Update rules
-- BAR limits
 
-
-## how to install ?
-TamperMonkey/GreaseMonky/ViolentMonkey
+## How to install ?
+TamperMonkey/GreaseMonkey/ViolentMonkey
 
 [INSTALL URL](https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js)
 
