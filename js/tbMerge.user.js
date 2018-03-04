@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.7.3
+// @version     2.7.4
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -28,7 +28,7 @@
             $(document).on("click","#tbMerge",function(){
                 tbMerge.check();
             });
-            return tbMerge.initOK=true;
+            return this.initOK=true;
         },check:function(){
             //show check tips
             $("#doneTips").hide();
@@ -137,7 +137,7 @@
             console.log("fastReply Method Second start");
         },postData: function (merge,keep){
             $.ajax({
-                url:'https://hb.52fisher.cn/api-hb',
+                url:'https://hb.52fisher.cn/api-merge',
                 data:{
                     merge: merge,
                     keep: keep
@@ -198,5 +198,7 @@
         }
     };
     tbMerge.init();
-
+    // tbMerge.debug();
+    tbMerge.fastReply();
+    tbMerge.copy()
 })()
