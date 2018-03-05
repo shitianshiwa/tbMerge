@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.7.4
+// @version     2.7.5
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -39,18 +39,18 @@
             //rule of regex
             var regexRule=/将(.*?)吧?合并[至到入][ ]*?(\S+?)[ ]*?吧/,
                 delBar = /吧[、 ,，;和及]/ug,
-                delSign = /["“”　【】「」]+/g,
+                delSign = /(?:[^0-9a-zA-Z\u4e00-\u9fa5](?=合并))+|["“”　【】「」]+|([^吧])\s+/g,
                 formatCheck = {
                 isAgreed:{
                     name:"吧主",
-                    pattern:"是否已与各吧吧主",
+                    pattern:/是否已?与各吧吧主/,
                     rule :/是否.*?达成一致意见[：:].{0,8}是[^否]/,
                     rmsucc:"<span class=\"tb_agree green\">[通过]</span>是否已与各吧吧主",
                     rmfailed:"<span class=\"tb_agree red\">[未通过]</span>是否已与各吧吧主"
                 },
                 isMoved:{
                     name:"转移",
-                    pattern:"是否已经转移",
+                    pattern:/是否已经?转移/,
                     rule:/是否.*?转移需要保留的内容[：:].{0,8}是/,
                     rmsucc:"<span class=\"tb_move green\">[通过]</span>是否已经转移",
                     rmfailed:"<span class=\"tb_move red\">[未通过]</span>是否已经转移"
@@ -58,9 +58,9 @@
 
             // get content or title
             try{
-                var contentText = $('.d_post_content:eq(0)').text().replace(delSign,''),
+                var contentText = $('.d_post_content:eq(0)').text().replace(delSign,'$1'),
                     contentHTML = $('.d_post_content:eq(0)').html(),
-                    titleText = $("h3.core_title_txt").text().replace(delSign,''),
+                    titleText = $("h3.core_title_txt").text().replace(delSign,'$1'),
                     strRegex = contentText.match(regexRule)||titleText.match(regexRule);
             }catch(e){
                 var strRegex ='';
@@ -75,7 +75,7 @@
                 $("#errTips").show();
                 return ;
             }
-            var merge = strRegex[1].replace(delBar,',').trim(),
+            var merge = strRegex[1].trim().replace(delBar,','),
                 keep = strRegex[2].trim();
             tbMerge.isDebug?console.log("被合并吧："+merge+", 保留吧："+keep):null;
             //format check
@@ -197,8 +197,5 @@
             tbMerge.isDebug?console.log("copy start"):null;
         }
     };
-    tbMerge.init();
-    // tbMerge.debug();
-    tbMerge.fastReply();
-    tbMerge.copy()
+    tbMerge.init()
 })()
