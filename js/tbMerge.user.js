@@ -10,7 +10,7 @@
 // @downloadURL    https://github.com/52fisher/tbMerge/raw/master/js/tbMerge.user.js
 // @supportURL	https://github.com/52fisher/tbMerge/issues
 // @grant       GM_addStyle
-// ==/UserScript=    
+// ==/UserScript==
 ;(function() {
     var tbMerge={
         isDebug:false,
@@ -156,7 +156,7 @@
                         });
                         return;
                     }
-                    $.dialog.alert("服务器打了个盹："+ extStatus);
+                    $.dialog.alert("服务器打了个盹："+ textStatus);
                 },success:function(e){
                     $('#checkResult').html(e);
                     $("#checkTips").hide();
@@ -200,5 +200,5 @@
     tbMerge.init();
     //tbMerge.debug();
     //tbMerge.fastReply();
-    //tbMerge.copy()
+    //  tbMerge.copy()
 })()
