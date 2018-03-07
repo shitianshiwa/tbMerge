@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.7.8
+// @version     2.7.9
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -172,22 +172,6 @@
             return this.isDebug = true;
         },copy:function(){
             $(".l_posts_num:first").after('<button id="copy" class="ui_btn ui_btn_m">复制</button>');
-            $(document).on("hover","#c2c",function(){
-                var e = document.getElementById("c2c");
-                if (document.selection) {
-                    // for IE
-                    var r = document.body.createTextRange();
-                    r.moveToElementText(e);
-                    r.moveEnd("character");
-                    r.select();
-                } else {
-                    // For others
-                    var s = window.getSelection();
-                    var r = document.createRange();
-                    r.selectNode(e);
-                    s.addRange(r);
-                }
-            });
             $("#copy").click(function(){
                 var e = '<textarea id="c2c"onmouseover="this.select()" style="outline:none;resize:none;width:100%;height:80px;border: none;">'+'标题：'+PageData.thread.title+'\n链接：'+location.href.split(/[#\?$]/)[0]+'</textarea>';
                 $.dialog.confirm(e,{
@@ -207,5 +191,5 @@
     tbMerge.init();
     //tbMerge.debug();
     //tbMerge.fastReply();
-    //  tbMerge.copy()
-})()
+    //tbMerge.copy()
+})()        
