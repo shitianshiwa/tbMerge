@@ -2,11 +2,11 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author		投江的鱼
-// @version     2.8.0
+// @version     2.8.1
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
-// @updateURL    https://gitee.com/fisher52/tbMerge/raw/master/js/tbMerge.user.js
+// @updateURL    https://gitee.com/fisher52/tbMerge/raw/master/js/tbMerge.meta.js
 // @downloadURL    https://gitee.com/fisher52/tbMerge/raw/master/js/tbMerge.user.js
 // @supportURL	https://gitee.com/fisher52/tbMerge/issues
 // @grant       GM_addStyle
@@ -42,14 +42,14 @@
                 delSign = /(?:[^0-9a-zA-Z\u4e00-\u9fa5](?=合并))+|["“”\*　【】「」]+|([^吧])\s+/g,
                 formatCheck = {
                 isAgreed:{
-                    name:"吧主",
+                    name:"吧主同意检测",
                     pattern:/是否已?与各吧吧主/,
                     rule :/是否.*?达成一致.{0,4}[：:].{0,8}是[^否]/,
                     rmsucc:"<span class=\"tb_agree green\">[通过]</span>是否已与各吧吧主",
                     rmfailed:"<span class=\"tb_agree red\">[未通过]</span>是否已与各吧吧主"
                 },
                 isMoved:{
-                    name:"转移",
+                    name:"贴子转移检测",
                     pattern:/是否已经?转移/,
                     rule:/是否.*?转移.{1,9}[：:].{0,8}是/,
                     rmsucc:"<span class=\"tb_move green\">[通过]</span>是否已经转移",
