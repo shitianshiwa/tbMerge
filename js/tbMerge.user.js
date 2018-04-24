@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     2.8.9
+// @version     2.9.0
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -58,7 +58,7 @@
                         must:true
                     },isMailed:{
                         name:"校园邮件检测",
-                        pattern:/是否[有已]发送(?:相关)?文件.{0,10}[：:].{0,8}/,
+                        pattern:/是否[有已]发送(?:相关)?文件.*?[：:].{0,8}/,
                         rule :/是[^否]/,
                         must:false
                     }};
@@ -88,20 +88,21 @@
             //format check
             for ( var i in formatCheck){
                 var sub_match = contentHTML.match(formatCheck[i].pattern);
-                if(sub_match){
-                    if(sub_match[0].match(formatCheck[i].rule)){
-                        contentHTML =  contentHTML.replace( sub_match[0] , rm.rmsucc+sub_match[0]);
-                        tbMerge.isDebug?console.log(formatCheck[i].name + "通过"):null;
-                        $('.d_post_content:eq(0)').html(contentHTML);
-                        continue;
-                    }
-                    contentHTML = contentHTML.replace( sub_match[0] , rm.rmfailed+sub_match[0]);
-                    $('.d_post_content:eq(0)').html(contentHTML);
-                    tbMerge.isDebug?console.log(formatCheck[i].name+"拒绝"):null;
+                if(!sub_match){
+                    tbMerge.isDebug?console.log(formatCheck[i].name+"未匹配"):null;
+                    formatCheck[i]["must"] ? $("#errTips").show():null;
                     continue;
                 }
-                tbMerge.isDebug?console.log(formatCheck[i].name+"未匹配"):null;
-                formatCheck[i]["must"] ? $("#errTips").show():null;
+                if(sub_match[0].match(formatCheck[i].rule)){
+                    contentHTML =  contentHTML.replace( sub_match[0] , rm.rmsucc+sub_match[0]);
+                    tbMerge.isDebug?console.log(formatCheck[i].name + "通过"):null;
+                    $('.d_post_content:eq(0)').html(contentHTML);
+                    continue;
+                }
+                contentHTML = contentHTML.replace( sub_match[0] , rm.rmfailed+sub_match[0]);
+                $('.d_post_content:eq(0)').html(contentHTML);
+                tbMerge.isDebug?console.log(formatCheck[i].name+"拒绝"):null;
+                continue;
             }
             tbMerge.postData(merge,keep);
         },fastReply:function(){
