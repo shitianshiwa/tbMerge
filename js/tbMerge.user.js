@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     2.9.0
+// @version     2.9.1
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -58,7 +58,7 @@
                         must:true
                     },isMailed:{
                         name:"校园邮件检测",
-                        pattern:/是否[有已]发送(?:相关)?文件.*?[：:].{0,8}/,
+                        pattern:/是否[有已]发送(?:相关)?文件.*?(?:<a.*?a>.*?)?[：:].{0,8}/,
                         rule :/是[^否]/,
                         must:false
                     }};
@@ -84,6 +84,7 @@
             }
             var merge = strRegex[1].trim().replace(delBar,','),
                 keep = strRegex[2].trim();
+            tbMerge.isDebug?console.group("debug"):null
             tbMerge.isDebug?console.log("被合并吧："+merge+"\n保留吧："+keep):null;
             //format check
             for ( var i in formatCheck){
@@ -104,6 +105,7 @@
                 tbMerge.isDebug?console.log(formatCheck[i].name+"拒绝"):null;
                 continue;
             }
+             tbMerge.isDebug?console.groupEnd():null;
             tbMerge.postData(merge,keep);
         },fastReply:function(){
             if(tbMerge.initOK === false) return ;
