@@ -119,7 +119,7 @@
                 n = $.json.encode(r);
                 //localStorage
                 $.tb.Storage.set("user_quick_reply_data", n);
-                tbMerge.isDebug ? console.log("fastReply Method First start");
+                tbMerge.isDebug ? console.log("fastReply Method First start") : null;
                 return;
             }
             //vip compatible
@@ -150,7 +150,7 @@
                     $.dialog.close();
                 });
             });
-            console.log("fastReply Method Second start");
+            tbMerge.isDebug ? console.log("fastReply Method Second start") : null;
         }, postData: function (merge, keep) {
             $.ajax({
                 url: 'https://hb.52fisher.cn/api-merge',
