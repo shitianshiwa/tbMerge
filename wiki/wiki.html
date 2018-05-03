@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>贴吧合并平台|贴吧合并大百科—常见问题集锦|TiebaMergeStage</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+    html {
+        font-family: sans-serif;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%
+    }
+
+    body {
+        margin: 0
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    main,
+    nav,
+    section,
+    summary {
+        display: block
+    }
+
+    audio,
+    canvas,
+    progress,
+    video {
+        display: inline-block;
+        vertical-align: baseline
+    }
+
+    audio:not([controls]) {
+        display: none;
+        height: 0
+    }
+
+    [hidden],
+    template {
+        display: none
+    }
+
+    a {
+        background: transparent
+    }
+
+    a:active,
+    a:hover {
+        outline: 0
+    }
+
+    abbr[title] {
+        border-bottom: 1px dotted
+    }
+
+    b,
+    strong {
+        font-weight: bold
+    }
+
+    dfn {
+        font-style: italic
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 0.67em 0
+    }
+
+    mark {
+        background: #ff0;
+        color: #000
+    }
+
+    small {
+        font-size: 80%
+    }
+
+    sub,
+    sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline
+    }
+
+    sup {
+        top: -0.5em
+    }
+
+    sub {
+        bottom: -0.25em
+    }
+
+    img {
+        border: 0
+    }
+
+    svg:not(:root) {
+        overflow: hidden
+    }
+
+    figure {
+        margin: 1em 40px
+    }
+
+    hr {
+        box-sizing: content-box;
+        height: 0
+    }
+
+    pre {
+        overflow: auto
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        font-family: monospace, monospace;
+        font-size: 1em
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        color: inherit;
+        font: inherit;
+        margin: 0
+    }
+
+    button {
+        overflow: visible
+    }
+
+    button,
+    select {
+        text-transform: none
+    }
+
+    button,
+    html input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        -webkit-appearance: button;
+        cursor: pointer
+    }
+
+    button[disabled],
+    html input[disabled] {
+        cursor: default
+    }
+
+    button::-moz-focus-inner,
+    input::-moz-focus-inner {
+        border: 0;
+        padding: 0
+    }
+
+    input {
+        line-height: normal
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        box-sizing: border-box;
+        padding: 0
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        height: auto
+    }
+
+    input[type="search"] {
+        -webkit-appearance: textfield;
+        box-sizing: content-box
+    }
+
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-decoration {
+        -webkit-appearance: none
+    }
+
+    fieldset {
+        border: 1px solid #c0c0c0;
+        margin: 0 2px;
+        padding: 0.35em 0.625em 0.75em
+    }
+
+    legend {
+        border: 0;
+        padding: 0
+    }
+
+    textarea {
+        overflow: auto
+    }
+
+    optgroup {
+        font-weight: bold
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    td,
+    th {
+        padding: 0
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"
+    }
+
+    body {
+        min-width: 1020px;
+        font: 13px/1.4 Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+        color: #333;
+        background-color: #fff
+    }
+
+    a {
+        color: #4183c4;
+        text-decoration: none
+    }
+
+    a:hover,
+    a:active {
+        text-decoration: underline
+    }
+
+    hr,
+    .rule {
+        height: 0;
+        margin: 15px 0;
+        overflow: hidden;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #ddd
+    }
+
+    hr:before,
+    .rule:before {
+        display: table;
+        content: ""
+    }
+
+    hr:after,
+    .rule:after {
+        display: table;
+        clear: both;
+        content: ""
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 1.1
+    }
+
+    h1 {
+        font-size: 30px
+    }
+
+    h2 {
+        font-size: 21px
+    }
+
+    h3 {
+        font-size: 16px
+    }
+
+    h4 {
+        font-size: 14px
+    }
+
+    h5 {
+        font-size: 12px
+    }
+
+    h6 {
+        font-size: 11px
+    }
+
+    small {
+        font-size: 90%
+    }
+
+    blockquote {
+        margin: 0
+    }
+
+    .lead {
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: 300;
+        color: #555
+    }
+
+    .text-muted {
+        color: #999
+    }
+
+    .text-danger {
+        color: #bd2c00
+    }
+
+    .text-emphasized {
+        font-weight: bold;
+        color: #333
+    }
+
+    ul,
+    ol {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0
+    }
+
+    ol ol,
+    ul ol {
+        list-style-type: lower-roman
+    }
+
+    ul ul ol,
+    ul ol ol,
+    ol ul ol,
+    ol ol ol {
+        list-style-type: lower-alpha
+    }
+
+    dd {
+        margin-left: 0
+    }
+
+    tt,
+    code {
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        font-size: 12px
+    }
+
+    pre {
+        margin-top: 0;
+        margin-bottom: 0;
+        font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace
+    }
+
+    #realtime .status {
+        overflow: visible;
+        position: absolute;
+        top: -5px;
+        left: 0;
+        background: url("/public/images/github-status.png");
+        width: 26px;
+        height: 26px;
+        display: block;
+        margin: 0 5px 0 0
+    }
+
+    #realtime .up {
+        background-position: 0 0
+    }
+
+    #realtime .problem {
+        background-position: 0 -53px
+    }
+
+    #realtime .down {
+        background-position: 0 -26px
+    }
+
+    .container {
+        max-width: 920px;
+        margin: 0 auto 20px auto
+    }
+
+    #header {
+        background: #FAFAFA;
+        background: -moz-linear-gradient(#FAFAFA, #EAEAEA);
+        background: -webkit-linear-gradient(#FAFAFA, #EAEAEA);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#eaeaea')";
+        border-bottom: 1px solid #CACACA;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 10px rgba(0, 0, 0, 0.1)
+    }
+
+    #markup {
+        padding: 3px
+    }
+
+    #markup article {
+        padding-top: 30px
+    }
+
+    .markdown-body {
+        overflow: hidden;
+        font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        word-wrap: break-word
+    }
+
+    .markdown-body>*:first-child {
+        margin-top: 0 !important
+    }
+
+    .markdown-body>*:last-child {
+        margin-bottom: 0 !important
+    }
+
+    .markdown-body .absent {
+        color: #c00
+    }
+
+    .markdown-body .anchor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        padding-right: 6px;
+        padding-left: 30px;
+        margin-left: -30px
+    }
+
+    .markdown-body .anchor:focus {
+        outline: none
+    }
+
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3,
+    .markdown-body h4,
+    .markdown-body h5,
+    .markdown-body h6 {
+        position: relative;
+        margin-top: 1em;
+        margin-bottom: 16px;
+        font-weight: bold;
+        line-height: 1.4
+    }
+
+    .markdown-body h1 .octicon-link,
+    .markdown-body h2 .octicon-link,
+    .markdown-body h3 .octicon-link,
+    .markdown-body h4 .octicon-link,
+    .markdown-body h5 .octicon-link,
+    .markdown-body h6 .octicon-link {
+        display: none;
+        color: #000;
+        vertical-align: middle
+    }
+
+    .markdown-body h1:hover .anchor,
+    .markdown-body h2:hover .anchor,
+    .markdown-body h3:hover .anchor,
+    .markdown-body h4:hover .anchor,
+    .markdown-body h5:hover .anchor,
+    .markdown-body h6:hover .anchor {
+        padding-left: 8px;
+        margin-left: -30px;
+        text-decoration: none
+    }
+
+    .markdown-body h1:hover .anchor .octicon-link,
+    .markdown-body h2:hover .anchor .octicon-link,
+    .markdown-body h3:hover .anchor .octicon-link,
+    .markdown-body h4:hover .anchor .octicon-link,
+    .markdown-body h5:hover .anchor .octicon-link,
+    .markdown-body h6:hover .anchor .octicon-link {
+        display: inline-block
+    }
+
+    .markdown-body h1 tt,
+    .markdown-body h1 code,
+    .markdown-body h2 tt,
+    .markdown-body h2 code,
+    .markdown-body h3 tt,
+    .markdown-body h3 code,
+    .markdown-body h4 tt,
+    .markdown-body h4 code,
+    .markdown-body h5 tt,
+    .markdown-body h5 code,
+    .markdown-body h6 tt,
+    .markdown-body h6 code {
+        font-size: inherit
+    }
+
+    .markdown-body h1 {
+        padding-bottom: 0.3em;
+        font-size: 2.25em;
+        line-height: 1.2;
+        border-bottom: 1px solid #eee
+    }
+
+    .markdown-body h1 .anchor {
+        line-height: 1
+    }
+
+    .markdown-body h2 {
+        padding-bottom: 0.3em;
+        font-size: 1.75em;
+        line-height: 1.225;
+        border-bottom: 1px solid #eee
+    }
+
+    .markdown-body h2 .anchor {
+        line-height: 1
+    }
+
+    .markdown-body h3 {
+        font-size: 1.5em;
+        line-height: 1.43
+    }
+
+    .markdown-body h3 .anchor {
+        line-height: 1.2
+    }
+
+    .markdown-body h4 {
+        font-size: 1.25em
+    }
+
+    .markdown-body h4 .anchor {
+        line-height: 1.2
+    }
+
+    .markdown-body h5 {
+        font-size: 1em
+    }
+
+    .markdown-body h5 .anchor {
+        line-height: 1.1
+    }
+
+    .markdown-body h6 {
+        font-size: 1em;
+        color: #777
+    }
+
+    .markdown-body h6 .anchor {
+        line-height: 1.1
+    }
+
+    .markdown-body p,
+    .markdown-body blockquote,
+    .markdown-body ul,
+    .markdown-body ol,
+    .markdown-body dl,
+    .markdown-body table,
+    .markdown-body pre {
+        margin-top: 0;
+        margin-bottom: 16px
+    }
+
+    .markdown-body hr {
+        height: 4px;
+        padding: 0;
+        margin: 16px 0;
+        background-color: #e7e7e7;
+        border: 0 none
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+        padding-left: 2em
+    }
+
+    .markdown-body ul.no-list,
+    .markdown-body ol.no-list {
+        padding: 0;
+        list-style-type: none
+    }
+
+    .markdown-body ul ul,
+    .markdown-body ul ol,
+    .markdown-body ol ol,
+    .markdown-body ol ul {
+        margin-top: 0;
+        margin-bottom: 0
+    }
+
+    .markdown-body li>p {
+        margin-top: 16px
+    }
+
+    .markdown-body dl {
+        padding: 0
+    }
+
+    .markdown-body dl dt {
+        padding: 0;
+        margin-top: 16px;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: bold
+    }
+
+    .markdown-body dl dd {
+        padding: 0 16px;
+        margin-bottom: 16px
+    }
+
+    .markdown-body blockquote {
+        padding: 0 15px;
+        color: #777;
+        border-left: 4px solid #ddd
+    }
+
+    .markdown-body blockquote>:first-child {
+        margin-top: 0
+    }
+
+    .markdown-body blockquote>:last-child {
+        margin-bottom: 0
+    }
+
+    .markdown-body table {
+        display: block;
+        width: 100%;
+        overflow: auto;
+        word-break: normal;
+        word-break: keep-all
+    }
+
+    .markdown-body table th {
+        font-weight: bold
+    }
+
+    .markdown-body table th,
+    .markdown-body table td {
+        padding: 6px 13px;
+        border: 1px solid #ddd
+    }
+
+    .markdown-body table tr {
+        background-color: #fff;
+        border-top: 1px solid #ccc
+    }
+
+    .markdown-body table tr:nth-child(2n) {
+        background-color: #f8f8f8
+    }
+
+    .markdown-body img {
+        max-width: 100%;
+        box-sizing: border-box
+    }
+
+    .markdown-body span.frame {
+        display: block;
+        overflow: hidden
+    }
+
+    .markdown-body span.frame>span {
+        display: block;
+        float: left;
+        width: auto;
+        padding: 7px;
+        margin: 13px 0 0;
+        overflow: hidden;
+        border: 1px solid #ddd
+    }
+
+    .markdown-body span.frame span img {
+        display: block;
+        float: left
+    }
+
+    .markdown-body span.frame span span {
+        display: block;
+        padding: 5px 0 0;
+        clear: both;
+        color: #333
+    }
+
+    .markdown-body span.align-center {
+        display: block;
+        overflow: hidden;
+        clear: both
+    }
+
+    .markdown-body span.align-center>span {
+        display: block;
+        margin: 13px auto 0;
+        overflow: hidden;
+        text-align: center
+    }
+
+    .markdown-body span.align-center span img {
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .markdown-body span.align-right {
+        display: block;
+        overflow: hidden;
+        clear: both
+    }
+
+    .markdown-body span.align-right>span {
+        display: block;
+        margin: 13px 0 0;
+        overflow: hidden;
+        text-align: right
+    }
+
+    .markdown-body span.align-right span img {
+        margin: 0;
+        text-align: right
+    }
+
+    .markdown-body span.float-left {
+        display: block;
+        float: left;
+        margin-right: 13px;
+        overflow: hidden
+    }
+
+    .markdown-body span.float-left span {
+        margin: 13px 0 0
+    }
+
+    .markdown-body span.float-right {
+        display: block;
+        float: right;
+        margin-left: 13px;
+        overflow: hidden
+    }
+
+    .markdown-body span.float-right>span {
+        display: block;
+        margin: 13px auto 0;
+        overflow: hidden;
+        text-align: right
+    }
+
+    .markdown-body code,
+    .markdown-body tt {
+        padding: 0;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 3px
+    }
+
+    .markdown-body code:before,
+    .markdown-body code:after,
+    .markdown-body tt:before,
+    .markdown-body tt:after {
+        letter-spacing: -0.2em;
+        content: "\00a0"
+    }
+
+    .markdown-body code br,
+    .markdown-body tt br {
+        display: none
+    }
+
+    .markdown-body del code {
+        text-decoration: inherit
+    }
+
+    .markdown-body pre>code {
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+        word-break: normal;
+        white-space: pre;
+        background: transparent;
+        border: 0
+    }
+
+    .markdown-body .highlight {
+        margin-bottom: 16px
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f7f7f7;
+        border-radius: 3px
+    }
+
+    .markdown-body .highlight pre {
+        margin-bottom: 0;
+        word-break: normal
+    }
+
+    .markdown-body pre {
+        word-wrap: normal
+    }
+
+    .markdown-body pre code,
+    .markdown-body pre tt {
+        display: inline;
+        max-width: initial;
+        padding: 0;
+        margin: 0;
+        overflow: initial;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0
+    }
+
+    .markdown-body pre code:before,
+    .markdown-body pre code:after,
+    .markdown-body pre tt:before,
+    .markdown-body pre tt:after {
+        content: normal
+    }
+
+    .markdown-body kbd {
+        display: inline-block;
+        padding: 3px 5px;
+        font-size: 11px;
+        line-height: 10px;
+        color: #555;
+        vertical-align: middle;
+        background-color: #fcfcfc;
+        border: solid 1px #ccc;
+        border-bottom-color: #bbb;
+        border-radius: 3px;
+        box-shadow: inset 0 -1px 0 #bbb
+    }
+
+    .codehilite {
+        background: #ffffff
+    }
+
+    .codehilite .c {
+        color: #999988;
+        font-style: italic
+    }
+
+    .codehilite .err {
+        color: #a61717;
+        background-color: #e3d2d2
+    }
+
+    .codehilite .k {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .o {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .cm {
+        color: #999988;
+        font-style: italic
+    }
+
+    .codehilite .cp {
+        color: #999999;
+        font-weight: bold
+    }
+
+    .codehilite .c1 {
+        color: #999988;
+        font-style: italic
+    }
+
+    .codehilite .cs {
+        color: #999999;
+        font-weight: bold;
+        font-style: italic
+    }
+
+    .codehilite .gd {
+        color: #000000;
+        background-color: #ffdddd
+    }
+
+    .codehilite .gd .x {
+        color: #000000;
+        background-color: #ffaaaa
+    }
+
+    .codehilite .ge {
+        color: #000000;
+        font-style: italic
+    }
+
+    .codehilite .gr {
+        color: #aa0000
+    }
+
+    .codehilite .gh {
+        color: #999999
+    }
+
+    .codehilite .gi {
+        color: #000000;
+        background-color: #ddffdd
+    }
+
+    .codehilite .gi .x {
+        color: #000000;
+        background-color: #aaffaa
+    }
+
+    .codehilite .go {
+        color: #888888
+    }
+
+    .codehilite .gp {
+        color: #555555
+    }
+
+    .codehilite .gs {
+        font-weight: bold
+    }
+
+    .codehilite .gu {
+        color: #aaaaaa
+    }
+
+    .codehilite .gt {
+        color: #aa0000
+    }
+
+    .codehilite .kc {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .kd {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .kp {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .kr {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .kt {
+        color: #445588;
+        font-weight: bold
+    }
+
+    .codehilite .m {
+        color: #009999
+    }
+
+    .codehilite .s {
+        color: #d14
+    }
+
+    .codehilite .na {
+        color: #008080
+    }
+
+    .codehilite .nb {
+        color: #0086B3
+    }
+
+    .codehilite .nc {
+        color: #445588;
+        font-weight: bold
+    }
+
+    .codehilite .no {
+        color: #008080
+    }
+
+    .codehilite .ni {
+        color: #800080
+    }
+
+    .codehilite .ne {
+        color: #990000;
+        font-weight: bold
+    }
+
+    .codehilite .nf {
+        color: #990000;
+        font-weight: bold
+    }
+
+    .codehilite .nn {
+        color: #555555
+    }
+
+    .codehilite .nt {
+        color: #000080
+    }
+
+    .codehilite .nv {
+        color: #008080
+    }
+
+    .codehilite .ow {
+        color: #000000;
+        font-weight: bold
+    }
+
+    .codehilite .w {
+        color: #bbbbbb
+    }
+
+    .codehilite .mf {
+        color: #009999
+    }
+
+    .codehilite .mh {
+        color: #009999
+    }
+
+    .codehilite .mi {
+        color: #009999
+    }
+
+    .codehilite .mo {
+        color: #009999
+    }
+
+    .codehilite .sb {
+        color: #d14
+    }
+
+    .codehilite .sc {
+        color: #d14
+    }
+
+    .codehilite .sd {
+        color: #d14
+    }
+
+    .codehilite .s2 {
+        color: #d14
+    }
+
+    .codehilite .se {
+        color: #d14
+    }
+
+    .codehilite .sh {
+        color: #d14
+    }
+
+    .codehilite .si {
+        color: #d14
+    }
+
+    .codehilite .sx {
+        color: #d14
+    }
+
+    .codehilite .sr {
+        color: #009926
+    }
+
+    .codehilite .s1 {
+        color: #d14
+    }
+
+    .codehilite .ss {
+        color: #990073
+    }
+
+    .codehilite .bp {
+        color: #999999
+    }
+
+    .codehilite .vc {
+        color: #008080
+    }
+
+    .codehilite .vg {
+        color: #008080
+    }
+
+    .codehilite .vi {
+        color: #008080
+    }
+
+    .codehilite .il {
+        color: #009999
+    }
+    </style>
+    <style type="text/css">
+    .markdown-body hr {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC")
+    }
+    </style>
+    <style type="text/css">
+    .toc {
+
+        width: 300px;
+        padding: 30px;
+        font-size: 16px;
+        border-right: 1px solid #eee;
+        height: 100%;
+        display: inline-block;
+        position: fixed;
+        left: 0;
+        overflow-y: scroll;
+    }
+
+    .container {
+
+        display: inline-block;
+        max-width: 800px;
+        position: relative;
+        left: 400px;
+    }
+
+    .toc ul {
+
+        margin-left: 10px;
+        padding: 5px;
+    }
+
+    .toc ul ul {
+
+        display: none;
+    }
+    .items{
+      list-style: none;
+    }
+    .item-list:hover{
+        background: #eee;
+    }
+    .item-list{
+      padding:5px 10px;
+    }
+    .item-list li{
+      font-size: 14px;
+    }
+    .item-list a{
+      text-decoration: none;
+      color: #333
+    }
+    .item-list a:hover{
+       color: #666;
+       text-decoration:underline;
+    }
+    .item-list a:active{
+       background: #eee
+    }
+           
+    </style>
+</head>
+
+<body>
+    <div class="toc">
+        <h2>贴吧合并大百科</h2>
+        <hr>
+        <ul class="items">
+            <li class="item-list"><a data-href="#_2" href="javascript:void(0)">申请须知</a>
+                <ul>
+                    <li><a data-href="#_3" href="javascript:void(0)">注意事项</a></li>
+                    <li><a data-href="#fast" href="javascript:void(0)">快速申请指南</a></li>
+                    <li><a data-href="#_4" href="javascript:void(0)">贴吧合并/拆分流程</a></li>
+                </ul>
+            </li>
+            <li class="item-list"><a data-href="#_5" href="javascript:void(0)">吧主相关</a>
+                <ul>
+                    <li><a data-href="#_6" href="javascript:void(0)">可以选择合并后的吧主吗？审核通过后需要自己辞职吧主吗？</a></li>
+                    <li><a data-href="#_7" href="javascript:void(0)">我的贴吧被合并了，但是吧主位置还在应该怎么办？</a></li>
+                    <li><a data-href="#_8" href="javascript:void(0)">如果参与合并的吧都没有吧主可以申请合并吗？</a></li>
+                    <li><a data-href="#xx" href="javascript:void(0)">xx吧主长期不在线，联系不上，可以直接合并吗？</a></li>
+                    <li><a data-href="#_9" href="javascript:void(0)">我是吧主，发起申请后后悔了怎么办？</a></li>
+                    <li><a data-href="#xx_1" href="javascript:void(0)">我是xx吧吧主，合并申请并未与我商量且我不同意被合并，该怎么办？</a></li>
+                    <li><a data-href="#_10" href="javascript:void(0)">合并过程中我可以审批吧主吗？</a></li>
+                </ul>
+            </li>
+            <li class="item-list"><a data-href="#_11" href="javascript:void(0)">贴吧相关</a>
+                <ul>
+                    <li><a data-href="#_12" href="javascript:void(0)">合并后数据会保留吗？</a></li>
+                    <li><a data-href="#_13" href="javascript:void(0)">贴吧合并能否转移被合并吧内的资源？</a></li>
+                    <li><a data-href="#_14" href="javascript:void(0)">为什么需要提供链接来证明？哪些证明是有效的？</a></li>
+                    <li><a data-href="#_15" href="javascript:void(0)">为什么一审通过后二审尚未回复回复贴吧已经合并了？</a></li>
+                    <li><a data-href="#xx_2" href="javascript:void(0)">我想申请合并/拆分xx吧，请问有可能吗？</a></li>
+                    <li><a data-href="#_16" href="javascript:void(0)">吧主已经同意合并了，为什么审核员告知仍然无法合并？</a></li>
+                    <li><a data-href="#_17" href="javascript:void(0)">贴吧合并的规则是什么？我该怎么做才能通过申请？</a></li>
+                    <li><a data-href="#_18" href="javascript:void(0)">被合并吧一定要存在吗？未创建的贴吧是否可以合并？</a></li>
+                    <li><a data-href="#_19" href="javascript:void(0)">我是学校贴吧，可以受理吗？</a></li>
+                    <li><a data-href="#_20" href="javascript:void(0)">我是校园吧主，非改名的合并申请应该怎么发送文件？</a></li>
+                </ul>
+            </li>
+            <li class="item-list"><a data-href="#_21" href="javascript:void(0)">审核相关</a>
+                <ul>
+                    <li><a data-href="#uv" href="javascript:void(0)">UV较高、名称含义不一致是什么意思？</a></li>
+                    <li><a data-href="#_22" href="javascript:void(0)">对审核结果有疑问应该怎么办？</a></li>
+                    <li><a data-href="#_23" href="javascript:void(0)">为什么我的申请会被吧务删除？</a></li>
+                    <li><a data-href="#_24" href="javascript:void(0)">为什么我多次在本吧发帖申请被封禁了？</a></li>
+                    <li><a data-href="#_25" href="javascript:void(0)">为什么我的贴子发了这么久还没有人审核？</a></li>
+                    <li><a data-href="#_26" href="javascript:void(0)">贴吧合并申请为什么屡次被拒？</a></li>
+                    <li><a data-href="#_27" href="javascript:void(0)">工作人员处理申请的时间范围是什么？</a></li>
+                    <li><a data-href="#_28" href="javascript:void(0)">我的上一个申请未通过审核，是否可以再次申请？</a></li>
+                </ul>
+            </li>
+            <li class="item-list"><a data-href="#_29" href="javascript:void(0)">格式相关</a>
+                <ul>
+                    <li><a data-href="#_30" href="javascript:void(0)">合并申请及说明</a></li>
+                    <li><a data-href="#_31" href="javascript:void(0)">拆分申请及说明</a></li>
+                    <li><a data-href="#_32" href="javascript:void(0)">拆分规定补充</a></li>
+                </ul>
+            </li>
+            <li class="item-list"><a data-href="#_33" href="javascript:void(0)">业务受理范围</a>
+                <ul>
+                    <li><a data-href="#_34" href="javascript:void(0)">贴吧拆分受理范围</a></li>
+                    <li><a data-href="#_35" href="javascript:void(0)">不受理的申请</a></li>
+                    <li><a data-href="#_36" href="javascript:void(0)">不受理的分类目录</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div id="markup">
+            <article id="content" class="markdown-body">
+                <h1 id="_1">贴吧合并大百科</h1>
+                <blockquote>
+                  贴吧合并由来已久，为了更快的帮助大家了解和通过合并/拆分申请，这里列出了一些常见的贴吧合并相关的问题，以方便需要的人自助查询。请注意，这并不是官方文档。所以里面所列内容仅供参考。
+                </blockquote>
+                <h2 id="_2">申请须知</h2>
+                <h3 id="_3">注意事项</h3>
+                <ol>
+                    <li>用户在发起贴吧合并前需涉及合并贴吧所有现任吧主一致同意。</li>
+                    <li>涉及合并贴吧有吧主的，申请需由吧主发起，没有吧主的，常驻网友可提出申请。</li>
+                    <li>合并申请发出后，需现任吧主在该申请贴后明确回复同意合并。</li>
+                    <li>已经进入到合并流程的申请，由现任吧主明确表示反对后，合并组组员会跟贴告知申请中止。</li>
+                    <li>遵循最优合并原则。如不常用名称合至常用名称、民间称谓合至官方称谓、内容低质量吧合至内容高质量吧。 </li>
+                </ol>
+                <h3 id="fast">快速申请指南</h3>
+                <p>如何快速的提交一个合并/拆分申请？如果你已经做完以下事情：</p>
+                <ol>
+                <li>与合并涉及到的贴吧吧主协商达成一致同意（拆分无需）。在“是否与各吧吧主协商达成一致”后填写“是”</li>
+                <li>没有需要转移的贴子。在“是否已经完成贴子转移”后填写“是”</li>
+                <li>合并涉及到的贴吧目录为准确目录。</li>
+                </ol>
+                <p>按照相应的格式发帖申请即可，注意，必须严格按照格式要求填写。格式要求见 <em>格式相关</em> 条目， <strong>勿擅自增删字符，更不要写错别字。</strong>
+                假设原申请涉及贴吧应为小说吧、小说吧，以下均为错误示范：</p>
+                <div class="codehilite"><pre>
+【申请合并】申请将*小说吧*吧合并到*小说*吧    
+【申请合并】申请将小说吧吧合并小说吧    
+【合并申请】申请小说贴吧吧合并到小说贴吧
+【合并】申请百度小说贴吧合并到小说吧
+【合并】申请*百度小说贴吧*合并到*小说*吧</pre></div>
+                <h3 id="_4">贴吧合并/拆分流程</h3>
+                <p><img alt="贴吧合并流程" src="data:image/jpeg;base64,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"></p>
+                <h2 id="_5">吧主相关</h2>
+                <h3 id="_6">可以选择合并后的吧主吗？审核通过后需要自己辞职吧主吗？</h3>
+                <p>相关公告：<a href="https://tieba.baidu.com/p/2499663201">[公告]关于吧主转移的相关说明</a></p>
+                <p>A吧合并至B吧，保留B吧吧务团队，合并后A吧吧务团队会自动下任，用户不能选择合并后吧主名单。保留吧吧主为原B吧吧务团队，管理员不做任何吧务团队调整。审核通过后，最好不要提交辞职申请，否则该申请可能会因吧主变更而被驳回。</p>
+                <h3 id="_7">我的贴吧被合并了，但是吧主位置还在应该怎么办？</h3>
+                <p>如果是在贴吧合并吧发起申请后出现的贴吧被合并但吧主未下任的情况，请到
+                    <a href="https://tieba.baidu.com/p/4079651072">【反馈】关于贴吧合并后出现吧主BUG的情况请在此贴反馈</a> <strong>按格式要求</strong>提交反馈</p>
+                <p>其他情形，请至<a href="http://tieba.baidu.com/hermes/feedback">用户反馈中心</a>提交反馈</p>
+                <h3 id="_8">如果参与合并的吧都没有吧主可以申请合并吗？</h3>
+                <p>无吧主的贴吧可以由常驻吧友(合并类申请常驻由审核员判定，拆分类申请常驻要求为6级及以上会员)发起申请。</p>
+                <h3 id="xx">xx吧主长期不在线，联系不上，可以直接合并吗？</h3>
+                <p>贴吧合并必须征得当前合并涉及吧所有吧主全部同意。</p>
+                <h3 id="_9">我是吧主，发起申请后后悔了怎么办？</h3>
+                <p>如果该申请还没有通过一审，直接删除该贴，系统会自动标记取消申请。如果已经通过一审，请在二审前联系该贴的审核专员中止申请。</p>
+                <h3 id="xx_1">我是xx吧吧主，合并申请并未与我商量且我不同意被合并，该怎么办？</h3>
+                <p>在该申请下回复/发帖说明，我是xx吧吧主，我不同意合并即可。</p>
+                <h3 id="_10">合并过程中我可以审批吧主吗？</h3>
+                <p>申请合并一审通过后，将不允许被合并贴吧有新任候选吧主或上任的新吧主，否则我们将会停滞该申请的二审提交，被合并吧吧主有结果之后，我们将会进行二审提交或驳回由新任吧主重新发表意见。</p>
+                <h2 id="_11">贴吧相关</h2>
+                <h3 id="_12">合并后数据会保留吗？</h3>
+                <p>A吧合并至B吧，保留B吧，A吧会被关闭且A吧所有数据包括会员、等级、经验等不会转移、合并、保留。若需要保留A吧的一些贴子、图片、视频或其它资料，请吧主进行手动转移，贴吧合并功能不负责转移内容。</p>
+                <h3 id="_13">贴吧合并能否转移被合并吧内的资源？</h3>
+                <p>贴吧合并流程中，被合并贴吧合并至保留贴吧，被合并贴吧的相关资源（分类、会员、贴子、模块）系统均不会转移，只有在合并之前由吧友手动转移，所以各位吧友在填写合并申请贴的时候，请务必在该选项“是否已转移需要保留的内容：？”后面填写“是”，并且对一些宝贵资源进行手动转移工作。否则也是无法通过初步审核的。针对这一条，如果是在填写格式上出现错误的，不需要重新发起合并申请贴，只需要在回复中修改即可。</p>
+                <h3 id="_14">为什么需要提供链接来证明？哪些证明是有效的？</h3>
+                <p>在工作人员没有找到有效材料能够说明两吧含义一致的时候，需要申请人自行提供证明材料。链接可以是正规媒体新闻、官方网站中能够说明涉及合并的贴吧是一致的。在很多情况下，如没有链接，但有报刊、出版物等有相关说明的也可以提供证明效力。</p>
+                <h3 id="_15">为什么一审通过后二审尚未回复回复贴吧已经合并了？</h3>
+                <p>懒</p>
+                <h3 id="xx_2">我想申请合并/拆分xx吧，请问有可能吗？</h3>
+                <p>请直接发贴申请，等待审核员审核即可。</p>
+                <h3 id="_16">吧主已经同意合并了，为什么审核员告知仍然无法合并？</h3>
+                <p>参与合并的各吧贴吧名称含义应当一致，符合各项贴吧合并条件。</p>
+                <h3 id="_17">贴吧合并的规则是什么？我该怎么做才能通过申请？</h3>
+                <p>关于详细的规则，写起来我能出一本书。为了节省所有人的时间，我们不会一一解释回复涉及到的术语。发起申请后，什么都不用做，请耐心等待审核即可，所有繁琐的事情将由审核员代劳。</p>
+                <h3 id="_18">被合并吧一定要存在吗？未创建的贴吧是否可以合并？</h3>
+                <p>A吧合并至B吧，B吧需为有效贴吧名称，A吧不是有效名称可以合并。</p>
+                <h3 id="_19">我是学校贴吧，可以受理吗？</h3>
+                <p>相关公告：<a href="https://tieba.baidu.com/p/5655980155">【公告】关于学校类贴吧合并拆分申请要求须知（2018最新版）</a></p>
+                <p>学校类贴吧除了在本吧按照规范格式发帖申请之外，还需额外发</p>
+                <ol>
+                    <li>教育部文件发函扫描件/复印件；</li>
+                    <li>网上教育部更名信息等相关信息；</li>
+                </ol>
+                <p>以上红头文件等其他相关证明文件等，请发至：xy_bazhu@baidu.com</p>
+                <p>邮箱提交相关文件之后，再至本吧发帖申请，谢谢合作！</p>
+                <p>该分类目录贴吧包括：小学、初中、中专、高中、职高、大专、大学等相关学校类院校。</p>
+                <h3 id="_20">我是校园吧主，非改名的合并申请应该怎么发送文件？</h3>
+                <p>发送正名文件到贴吧官方邮箱。正名，即当前贵校所用的名称。</p>
+                <h2 id="_21">审核相关</h2>
+                <h3 id="uv">UV较高、名称含义不一致是什么意思？</h3>
+                <p>见 <em>贴吧合并的规则是什么？我该怎么做才能通过申请？</em></p>
+                <h3 id="_22">对审核结果有疑问应该怎么办？</h3>
+                <ol>
+                    <li>对于已拒绝之申请，如申请者无法提供新证据的，不再重复受理，对于重复顶贴行为视为干扰贴吧正常管理，吧主有权删除并不作解释；</li>
+                    <li>如有新证据足以推翻原合并受理结果的，可由原受理该申请的组员进行通知及反馈。</li>
+                </ol>
+                <h3 id="_23">为什么我的申请会被吧务删除？</h3>
+                <p>贴吧合并吧工作人员有权删除对同一内容的反复申请（询问）以及不符合合并标准之申请并保留对闹事者的封权处理，并不负责对此删除行为做出解释；</p>
+                <h3 id="_24">为什么我多次在本吧发帖申请被封禁了？</h3>
+                <p>请不要尝试以下行为：已经处理的申请仍然多次召唤工作人员、擅自删除工作人员回复以及违法了其他贴吧合并相关规定。</p>
+                <h3 id="_25">为什么我的贴子发了这么久还没有人审核？</h3>
+                <p>由于拆分申请相较合并申请较少，故而审核保持在两周左右；合并申请正常工作日内受理。如果申请超过一个月仍未审核，<strong>请确保贴子格式正确、关闭禁止评论权限</strong>。贴子格式在首次提醒后如果仍然错误，将不再给予提醒。</p>
+                <h3 id="_26">贴吧合并申请为什么屡次被拒？</h3>
+                <p>关于贴吧合并很显然是有一定的条件的，例如说格式不对？或者填写的相关资料不对？都有可能是被拒的原因，所以请各位吧友在被拒的时候慎重参考工作人员的回复，不要一味的重复发贴，如果不能按照正确的发贴格式、或者提供相关资料，即使发再多贴也是无法合并的。经常有许多吧主无视合并吧工作人员的回复，一味的重复发贴、顶贴，对贴吧合并吧造成秩序上的混乱。对此我们表示实在没办法的话会进行删除处理，并不做解释。</p>
+                <h3 id="_27">工作人员处理申请的时间范围是什么？</h3>
+                <p>工作日内正常处理申请，长假、特殊情况等请留意吧内公告。周末、国家法定节假日通常不审核。</p>
+                <h3 id="_28">我的上一个申请未通过审核，是否可以再次申请？</h3>
+                <p>见 <em>对审核结果有疑问应该怎么办？</em>，如果无新材料提供证明依据，不会重复受理。如果无视工作人员提醒，多次干扰、骚扰正常审核工作，情节严重将不再受理相关申请。</p>
+                <h2 id="_29">格式相关</h2>
+                <h3 id="_30">合并申请及说明</h3>
+                <p><strong>贴子标题：</strong></p>
+                <div class="codehilite"><pre>【申请合并】申请将xx吧合并至xx吧（多吧申请请用“以下贴吧”概括）
+</pre></div>
+                <p><strong>贴子内容：</strong></p>
+                <div class="codehilite"><pre>申请将xx吧合并至xx吧。（此处请填写具体吧名，多吧申请请用，、等隔开）
+是否已与各吧吧主协商达成一致意见：（是或否）
+是否已经转移需要保留的内容：（是或否）
+申请贴吧合并的原因：（此项为必填写项，填写此项有助于提高您的申请处理进度）
+被合并贴吧链接：（此项为必填写项，填写此项有助于提高您的申请处理进度 ）
+合并保留贴吧链接：（此项为必填写项，填写此项有助于提高您的申请处理进度 ） 
+</pre></div>
+                <h3 id="_31">拆分申请及说明</h3>
+                <p><strong>贴子标题：</strong></p>
+                <div class="codehilite"><pre>【申请拆分】申请将xx吧从xx吧拆分
+</pre></div>
+                <p><strong>贴子内容：</strong></p>
+                <div class="codehilite"><pre>申请将xx吧从xx吧拆分
+相关贴吧连接： （请出示需要拆分的贴吧连接）
+相关贴吧名称含义及属性不一致的官方证明连接： 
+（请出示有效的官方证明，注：百度百科不能做为贴吧拆分依据）
+申请贴吧拆分的原因：（此项为必填写项，填写此项有助于提高您的申请处理进度） 
+</pre></div>
+                <h3 id="_32">拆分规定补充</h3>
+                <ol>
+                    <li>拆分申请人须是被拆分贴吧常驻吧友或吧主，常驻要求为6级及以上会员（此类要求目的在于防止吧友恶意拆吧）</li>
+                    <li>拆分申请人须提供官方认可的资料证明其属性含义（如官方微博、官方新闻、官方发布视频或网站）</li>
+                    <li>拆分申请人以IP为准，每个IP申请人至多申请10次贴吧拆分（无论是否成功），如已超过10次可由其他IP常驻吧友发起申请</li>
+                    <li>贴吧拆分申请在原有规定基础上，相关贴吧须根据审核过程考虑是否增加20名吧友联名同意该吧拆分之申请，其意义在于贴吧拆分后该吧存在之意义。</li>
+                    <li>关于“相关贴吧连接： （请出示需要拆分的贴吧连接）”，近期出现申请人提供的贴吧链接为无效贴吧首页链接，关键词为被拆分吧的拆分吧链接。现规定，申请人所提供的相关贴吧链接应为<strong> 【关键词为拆分贴吧但所属链接为被拆分贴吧的链接】</strong> 否则<em>视为无效</em>，需重新发帖申请。</li>
+                </ol>
+                <h2 id="_33">业务受理范围</h2>
+                <h3 id="_34">贴吧拆分受理范围</h3>
+                <ol>
+                    <li>系统自动跳转的贴吧但含义及属性不一致，由申请人提供不同含义及属性的官方证明，允许拆分。</li>
+                    <li>在贴吧合并吧已经通过正常渠道合并的贴吧，但之后又出现新含义或新属性的，由申请人提供不同含义及属性的官方证明，允许拆分。</li>
+                </ol>
+                <h3 id="_35">不受理的申请</h3>
+                <p><strong>注意：重复发起以下不受理的申请可能会产生非常糟糕的后果，请慎重</strong></p>
+                <ol>
+                    <li>个人贴吧及贴吧俱乐部性质的相关合并申请；</li>
+                    <li>未按正确格式发起的合并申请；</li>
+                    <li>未按要求提供相关证据链接或证据不可查的合并申请；</li>
+                    <li>带有任何人身攻击、商业、涉及黄色等性质言论的申请；</li>
+                    <li>擅自删除本吧工作人员的回复；<strong>（此行为一律封禁删帖且永不受理相关申请）</strong></li>
+                    <li>有恶意删贴及清空数据行为的贴吧合并申请；</li>
+                    <li>恶意合并申请；</li>
+                    <li>其它不属于贴吧合并吧受理范围内的申请。</li>
+                    <li>没有官方证明相关贴吧具有新含义及属性的拆分申请。</li>
+                    <li>无独立存在意义的拆分申请。</li>
+                    <li>所有涉及官方贴吧商业类的合并、拆分，都不予受理。</li>
+                </ol>
+                <h3 id="_36">不受理的分类目录</h3>
+                <ol>
+                    <li>姓氏类贴吧</li>
+                    <li>文玩类贴吧(相关公告：<a href="https://tieba.baidu.com/p/4630002924">【公告】关于全面暂停贴吧文玩类目录的贴吧合并、拆分申请通知</a>)</li>
+                    <li>文学类分类目录(相关公告：<a href="https://tieba.baidu.com/p/4565367316">【公告】关于暂停相关文学小说分类目录的贴吧合并申请通知</a>)</li>
+                </ol>
+            </article>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(".item-list>a").click(function() {
+      $(this).next().slideToggle();
+    })
+    $(".item-list ul a").click(function() {
+      $(document).scrollTop($($(this).data("href")).offset().top);
+    })
+    </script>
+</body>
+
+</html>
