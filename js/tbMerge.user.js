@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     2.9.9
+// @version     3.0.0
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -92,10 +92,10 @@
                     return;
                 }
                 var tmp = titleText.match(regexRule);
-                if (!strRegex[0].match(tmp[0])) {
+                if (strRegex[1] != tmp[1] || strRegex[2] != tmp[2]) {
                     if (titleText.indexOf('以下贴') == -1) {
-                        tbMerge.isDebug ? console.log('标题: \n合并吧: ' + tmp[1] + ',保留吧: ' + tmp[2]) : null;
-                        tbMerge.isDebug ? console.log('申请: \n合并吧: ' + strRegex[1] + ',保留吧: ' + strRegex[2]) : null;
+                        tbMerge.isDebug ? console.log('标题: ' + tmp[0]) : null;
+                        tbMerge.isDebug ? console.log('申请: ' + strRegex[0]) : null;
                         tbMerge.showerr('该申请标题与内容不一致');
                         return;
                     }
@@ -129,6 +129,25 @@
             }
             tbMerge.isDebug ? console.groupEnd() : null;
             tbMerge.postData(merge, keep);
+            // manager check
+            $.getJSON('/home/get/panel', {
+                un: PageData.thread.author,
+                ie: 'utf-8'
+            }, function(e) {
+                if (e.no) return;
+                var flag = false;
+                if (e.data.honor.manager != null) {
+                    for (i in e.data.honor.manager.manager.forum_list) {
+                        if (strRegex[0].match(e.data.honor.manager.manager.forum_list[i])) {
+                            flag = true;
+                            break;
+                        }
+                    }
+                }
+                if (!flag) {
+                    tbMerge.showerr('发贴人非相关贴吧吧主', true)
+                }
+            });
         },
         fastReply: function() {
             if (tbMerge.initOK === false) return;
@@ -210,9 +229,13 @@
             console.log("debug start")
             return this.isDebug = true;
         },
-        showerr: function(e = '该贴不符合申请格式要求') {
-            $("#check-tips").hide()
-            $("#err-tips").show().html(e);
+        showerr: function(e = '该贴不符合申请格式要求', add = false) {
+            $("#check-tips").hide();
+            if ($("#err-tips").html() == '') {
+                $("#err-tips").show().html(e);
+                return;
+            }
+            add ? $("#err-tips").show().append(',' + e) : $("#err-tips").show().html(e);
         },
         copy: function() {
             $(".l_posts_num:first").after('<button id="copy" class="ui_btn ui_btn_m">复制</button>');
