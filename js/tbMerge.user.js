@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     3.0.0
+// @version     3.0.1
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -39,9 +39,10 @@
             // remove tb_*
             $("span[class^=tb]").remove();
             //rule of regex
-            var regexRule = /(?:请(?!合并)[将把]?|[将把])(.{1,90}?)吧?合并[至到入](.*?吧?.*?)吧/,
+            var regexRule = /(?:申?请(?!合并)[将把]?|[将把])+(.{1,90}?)吧?合并[至到入](.*?吧?.*?)吧/,
                 delBar = /吧[、 ,，;和及与 ]+/ug,
                 delSign = /(?:[^0-9a-zA-Z\u4e00-\u9fa5](?=合并))+|["“”\*　【】「」]+|(?:([^吧])[\f\v\t]+)/g,
+                barlistsRule = /以下贴?|等.个贴?吧|等吧/,
                 rm = {
                     rmsucc: "<span class=\"tb_agree green\">[通过]</span>",
                     rmfailed: "<span class=\"tb_agree red\">[未通过]</span>"
@@ -71,7 +72,7 @@
                 var contentText = $('.d_post_content:eq(0)').text().replace(delSign, '$1'),
                     contentHTML = $('.d_post_content:eq(0)').html(),
                     titleText = $("h3.core_title_txt").text().replace(delSign, '$1'),
-                    strRegex = contentText.match(regexRule) || titleText.match(regexRule);
+                    strRegex = contentText.toLowerCase().match(regexRule) || titleText.toLowerCase().match(regexRule);
             } catch (e) {
                 var strRegex = '';
                 console.log("合并规则产生名单错误:\n" + e.message + "\n");
@@ -87,15 +88,15 @@
             }
             //title should keep pace with content
             try {
-                if (strRegex[0].indexOf('以下贴') != -1) {
+                if (strRegex[0].match(barlistsRule)) {
                     tbMerge.showerr('被合并吧未正确填写');
                     return;
                 }
                 var tmp = titleText.match(regexRule);
                 if (strRegex[1] != tmp[1] || strRegex[2] != tmp[2]) {
-                    if (titleText.indexOf('以下贴') == -1) {
-                        tbMerge.isDebug ? console.log('标题: ' + tmp[0]) : null;
-                        tbMerge.isDebug ? console.log('申请: ' + strRegex[0]) : null;
+                    if (titleText.match(barlistsRule)) {
+                        tbMerge.isDebug ? console.log('标题: \n被合并吧:' + tmp[1] + '  保留吧:  ' + tmp[2]) : null;
+                        tbMerge.isDebug ? console.log('申请: \n被合并吧:' + strRegex[1] + '  保留吧:  ' + strRegex[2]) : null;
                         tbMerge.showerr('该申请标题与内容不一致');
                         return;
                     }
@@ -140,6 +141,7 @@
                     for (i in e.data.honor.manager.manager.forum_list) {
                         if (strRegex[0].match(e.data.honor.manager.manager.forum_list[i])) {
                             flag = true;
+                            tbMerge.isDebug ? console.log('申请人吧主检测:'+e.data.honor.manager.manager.forum_list[i]):null;
                             break;
                         }
                     }
