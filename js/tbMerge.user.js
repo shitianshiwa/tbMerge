@@ -94,7 +94,7 @@
                 }
                 var tmp = titleText.match(regexRule);
                 if (strRegex[1] != tmp[1] || strRegex[2] != tmp[2]) {
-                    if (titleText.match(barlistsRule)) {
+                    if (!titleText.match(barlistsRule)) {
                         tbMerge.isDebug ? console.log('标题: \n被合并吧:' + tmp[1] + '  保留吧:  ' + tmp[2]) : null;
                         tbMerge.isDebug ? console.log('申请: \n被合并吧:' + strRegex[1] + '  保留吧:  ' + strRegex[2]) : null;
                         tbMerge.showerr('该申请标题与内容不一致');
