@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     3.0.1
+// @version     3.0.3
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -69,10 +69,10 @@
                 };
             // get content or title
             try {
-                var contentText = $('.d_post_content:eq(0)').text().replace(delSign, '$1'),
+                var contentText = $('.d_post_content:eq(0)').text().replace(delSign, '$1').toLowerCase(),
                     contentHTML = $('.d_post_content:eq(0)').html(),
-                    titleText = $("h3.core_title_txt").text().replace(delSign, '$1'),
-                    strRegex = contentText.toLowerCase().match(regexRule) || titleText.toLowerCase().match(regexRule);
+                    titleText = $("h3.core_title_txt").text().replace(delSign, '$1').toLowerCase(),
+                    strRegex = contentText.match(regexRule) || titleText.match(regexRule);
             } catch (e) {
                 var strRegex = '';
                 console.log("合并规则产生名单错误:\n" + e.message + "\n");
@@ -128,12 +128,12 @@
                 tbMerge.isDebug ? console.log(formatCheck[i].name + "拒绝") : null;
                 continue;
             }
-            tbMerge.isDebug ? console.groupEnd() : null;
             tbMerge.postData(merge, keep);
             // manager check
             $.getJSON('/home/get/panel', {
                 un: PageData.thread.author,
-                ie: 'utf-8'
+                ie: 'utf-8',
+                r: Math.random()
             }, function(e) {
                 if (e.no) return;
                 var flag = false;
@@ -141,11 +141,13 @@
                     for (i in e.data.honor.manager.manager.forum_list) {
                         if (strRegex[0].match(e.data.honor.manager.manager.forum_list[i])) {
                             flag = true;
-                            tbMerge.isDebug ? console.log('申请人吧主检测:'+e.data.honor.manager.manager.forum_list[i]):null;
                             break;
                         }
                     }
                 }
+                tbMerge.isDebug ? console.log('申请人吧主检测:' + (flag ? "通过" : "拒绝")) : null;
+                tbMerge.isDebug ? console.log('申请人所担任吧主:' + e.data.honor.manager.manager.forum_list.join(' ')) : null;
+                tbMerge.isDebug ? console.groupEnd() : null;
                 if (!flag) {
                     tbMerge.showerr('发贴人非相关贴吧吧主', true)
                 }
