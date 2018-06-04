@@ -133,7 +133,7 @@
             $.getJSON('/home/get/panel', {
                 un: PageData.thread.author,
                 ie: 'utf-8',
-                r: Math.random()
+                r: Math.random() //nocache to get newest data of manager 
             }, function(e) {
                 if (e.no) return;
                 var flag = false;
