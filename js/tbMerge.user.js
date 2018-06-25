@@ -136,8 +136,7 @@
                 r: Math.random() //nocache to get newest data of manager
             }, function (e) {
                 if (e.no) return;
-                var flag = '拒绝',
-                    bz = '无';
+                var bz,flag = '拒绝';
                 try {
                     for (i in e.data.honor.manager.manager.forum_list) {
                         if (strRegex[0].match(e.data.honor.manager.manager.forum_list[i])) {
@@ -152,7 +151,7 @@
                 tbMerge.isDebug ? console.log('申请人吧主检测:' + flag) : null;
                 tbMerge.isDebug ? console.log('申请人所担任吧主:' + bz) : null;
                 tbMerge.isDebug ? console.groupEnd() : null;
-                flag == '拒绝' ? null : tbMerge.showerr('发贴人非相关贴吧吧主', true);
+                flag == '拒绝' ? tbMerge.showerr('发贴人非相关贴吧吧主', true) : null;
             });
         },
         fastReply: function () {
