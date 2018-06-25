@@ -108,24 +108,24 @@
             var merge = strRegex[1].trim().replace(delBar, ','),
                 keep = strRegex[2].trim();
             tbMerge.isDebug ? console.group("debug") : null
-            tbMerge.isDebug ? console.log("被合并吧：" + merge + "\n保留吧：" + keep) : null;
+            tbMerge.isDebug ? console.log("被合并吧:" + merge + "\n保留吧:" + keep) : null;
             //format check
             for (var i in formatCheck) {
                 var sub_match = contentHTML.match(formatCheck[i].pattern);
                 if (!sub_match) {
-                    tbMerge.isDebug ? console.log(formatCheck[i].name + "未匹配") : null;
+                    tbMerge.isDebug ? console.log(formatCheck[i].name + ":未匹配") : null;
                     formatCheck[i]["must"] ? tbMerge.showerr() : null;
                     continue;
                 }
                 if (sub_match[0].match(formatCheck[i].rule)) {
                     contentHTML = contentHTML.replace(sub_match[0], rm.rmsucc + sub_match[0]);
-                    tbMerge.isDebug ? console.log(formatCheck[i].name + "通过") : null;
+                    tbMerge.isDebug ? console.log(formatCheck[i].name + ":通过") : null;
                     $('.d_post_content:eq(0)').html(contentHTML);
                     continue;
                 }
                 contentHTML = contentHTML.replace(sub_match[0], rm.rmfailed + sub_match[0]);
                 $('.d_post_content:eq(0)').html(contentHTML);
-                tbMerge.isDebug ? console.log(formatCheck[i].name + "拒绝") : null;
+                tbMerge.isDebug ? console.log(formatCheck[i].name + ":拒绝") : null;
                 continue;
             }
             tbMerge.postData(merge, keep);
