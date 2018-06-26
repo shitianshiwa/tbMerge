@@ -130,28 +130,56 @@
             }
             tbMerge.postData(merge, keep);
             // manager check
+            var bz = '',flag = false;
             $.getJSON('/home/get/panel', {
                 un: PageData.thread.author,
                 ie: 'utf-8',
-                r: Math.random() //nocache to get newest data of manager
+                _: Math.random() //nocache to get newest data of manager
             }, function (e) {
-                if (e.no) return;
-                var bz,flag = '拒绝';
+                if (e.no) {
+                    tbMerge.isDebug ? console.warn('获取申请人吧主信息出错:Method first') : null;
+                    return;
+                }
                 try {
-                    for (i in e.data.honor.manager.manager.forum_list) {
+                    for (var i in e.data.honor.manager.manager.forum_list) {
                         if (strRegex[0].match(e.data.honor.manager.manager.forum_list[i])) {
-                            flag = '通过';
+                            flag = true;
                             break;
                         }
                         bz = e.data.honor.manager.manager.forum_list.join(' ');
                     }
+                    if (!flag && e.data.honor.manager.manager.count != e.data.honor.manager.manager.forum_list.length) {
+                        //if count is inconsistent with length , Method second Starts
+                        $.getJSON('/pmc/tousu/getRole', {
+                            manager_uname: PageData.thread.author
+                        }, function (e) {
+                            if (e.errno) {
+                                tbMerge.isDebug ? console.warn('获取申请人吧主信息出错:Method second') : null;
+                                return;
+                            }
+                            for (var i in e.data.roles) {
+                                flag = e.data.roles[i].forum_role == 'manager' && Boolean(strRegex[0].match(e.data.roles[i].forum_name));
+                                if (flag) {
+                                    bz = bz + ' ' + e.data.roles[i].forum_name;
+                                    bz = bz + '(Method second)';
+                                    tbMerge.isDebug ? console.log('申请人吧主检测:' + (flag ? '通过' : '拒绝')) : null;
+                                    tbMerge.isDebug ? console.log('申请人所担任吧主:' + bz) : null;
+                                    tbMerge.isDebug ? console.groupEnd() : null;
+                                    !flag ? tbMerge.showerr('发贴人非相关贴吧吧主', true) : null;
+                                    break;
+                                }
+                            }
+                        });
+                        return;
+                    }
+                    tbMerge.isDebug ? console.log('申请人吧主检测:' + (flag ? '通过' : '拒绝')) : null;
+                    tbMerge.isDebug ? console.log('申请人所担任吧主:' + bz) : null;
+                    tbMerge.isDebug ? console.groupEnd() : null;
+                    !flag ? tbMerge.showerr('发贴人非相关贴吧吧主', true) : null;
                 } catch (err) {
                     bz = '无';
+                    tbMerge.isDebug ? console.warn(err.message) : null;
                 }
-                tbMerge.isDebug ? console.log('申请人吧主检测:' + flag) : null;
-                tbMerge.isDebug ? console.log('申请人所担任吧主:' + bz) : null;
-                tbMerge.isDebug ? console.groupEnd() : null;
-                flag == '拒绝' ? tbMerge.showerr('发贴人非相关贴吧吧主', true) : null;
             });
         },
         fastReply: function () {
@@ -261,7 +289,7 @@
         }
     };
     tbMerge.init();
-    //tbMerge.debug();
+    tbMerge.debug();
     tbMerge.fastReply();
     tbMerge.copy()
 })()
