@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     3.0.7
+// @version     3.0.8
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -105,7 +105,7 @@
                 tbMerge.showerr('该申请标题不符合格式要求');
                 tbMerge.isDebug ? console.log(e.message) : null;
             }
-            if (PageData.power.reply_private_flag) {
+            if (PageData.power.reply_private_flag != 1) {
                 tbMerge.showerr('申请人设置了评论权限', true);
             }
             var merge = strRegex[1].trim().replace(delBar, ','),
@@ -293,7 +293,7 @@
         }
     };
     tbMerge.init();
-    //tbMerge.debug();
+    tbMerge.debug();
     tbMerge.fastReply();
     tbMerge.copy()
 })()
