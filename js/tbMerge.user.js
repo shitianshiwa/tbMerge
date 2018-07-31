@@ -2,7 +2,7 @@
 // @name        贴吧合并功能增强
 // @namespace   https://github.com/52fisher/tbMerge
 // @author      投江的鱼
-// @version     3.0.8
+// @version     3.0.9
 // @description 适用于贴吧合并吧标准申请格式,兼容部分非标准格式内容
 // @include     http://tieba.baidu.com/p/*
 // @include     https://tieba.baidu.com/p/*
@@ -62,7 +62,7 @@
                     },
                     isMailed: {
                         name: "校园邮件检测",
-                        pattern: /是否[有已]发送(?:相关)?文件.*?(?:<a.*?a>.*?)?[：:].{0,8}/,
+                        pattern: /是否[有已]?发送(?:相关)?文件.*?(?:<a.*?a>.*?)?[：:].{0,8}/,
                         rule: /是[^否]/,
                         must: false
                     }
@@ -293,7 +293,7 @@
         }
     };
     tbMerge.init();
-    tbMerge.debug();
+    //tbMerge.debug();
     tbMerge.fastReply();
     tbMerge.copy()
 })()
